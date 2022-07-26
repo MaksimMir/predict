@@ -1,0 +1,69 @@
+@import '../../Styles/index.scss';
+
+.header {
+    min-height: 550px;
+    background: url('../../images/blik.png') no-repeat center;
+    background-size: cover;
+    @include middle {
+        margin-bottom: 30px;
+    }
+    &__top {
+        width: 100%;
+        text-align: center;
+        padding: 17px 0 10px 0;
+    }
+    &__line {
+        border-bottom: 2px solid rgba(#fff, 0.3);
+        width: 100%;
+    }
+}
+
+.bunner {
+    &__img {
+    position: relative;
+    width: 225px;
+    height: 225px;
+    margin: 34px 0;
+    background: url('../../images/img3.png') no-repeat center;
+    background-size: contain;
+    @include middle-small {
+        margin: 41px 0;
+        width: 310px;
+        height: 310px;
+    }
+    @include middle {
+        width: 390px;
+        height: 390px;
+    }
+        &::after {
+            position: absolute;
+            content: '';
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            top: 30px;
+            left: 30px;
+            background: url('../../images/img4.png') no-repeat center;
+            background-size: contain;
+            @include middle-small {
+                width: 230px;
+                height: 230px;
+                top: 40px;
+                left: 40px;
+            }
+            @include middle {
+                width: 290px;
+                height: 290px;
+                top: 50px;
+                left: 50px;
+            }
+        }
+    }
+    &__text {
+        width: 310px;
+    }
+    &__upper {
+        text-transform: uppercase;
+        padding-bottom: 20px;
+    }
+}

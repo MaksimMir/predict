@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'BadScript';
+  src: url('fonts/BadScript-Regular.ttf');
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('fonts/Roboto-Black.ttf');
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('fonts/Roboto-Bold.ttf');
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('fonts/Roboto-Medium.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('fonts/Roboto-Regular.ttf');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('fonts/Roboto-Light.ttf');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('fonts/Roboto-Thin.ttf');
+  font-style: normal;
+  font-weight: 100;
+}
+
+@import './Styles/index.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  @include textstyle('Roboto');
+  min-height: 500px;
+  min-width: 320px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #202024;
+  transition: all .7s;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.app {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  @include extra-small {
+    max-width: 425px;
+  }
+  @include middle-small {
+    max-width: 768px;
+  }
+  @include middle {
+    max-width: 1024px;
+  }
+  @include large {
+    max-width: 1400px;
+  }
+}
+
+#transition_disabled {
+  transition: none !important;
+}
+
+.errorPage {
+    font-size: 100px;
+    line-height: 150pz;
+    color: rgba(#fff, .6);
+    width: 200px;
+    text-align: center;
+    margin: 300px auto;
+  }

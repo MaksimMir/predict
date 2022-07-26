@@ -1,0 +1,46 @@
+@mixin text($size, $lh, $weight) {
+    font-size: $size;
+    line-height: $lh;
+    font-weight: $weight;
+    font-style: normal;
+}
+
+@mixin textstyle($style: 'Roboto') {
+    font-family: $style;
+}
+
+@mixin extra-large {
+    @media (min-width: 1200px) {
+      @content; 
+  } 
+  }
+  
+  @mixin large {
+    @media (min-width: 1000px) {
+        @content; 
+    }     
+  }
+  
+  @mixin middle {
+    @media (min-width: 768px) {
+        @content; 
+    }     
+  }
+  
+  @mixin middle-small {
+    @media (min-width: 426px) {
+        @content; 
+    }     
+  }
+  
+  @mixin small {
+    @media (min-width: 376px) {
+        @content; 
+    }     
+  }
+  
+  @mixin extra-small {
+    @media (min-width: 320px) {
+        @content; 
+    }     
+  }

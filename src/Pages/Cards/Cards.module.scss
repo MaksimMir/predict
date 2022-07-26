@@ -1,0 +1,140 @@
+@import '../../Styles/index';
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 60px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 83px;
+        height: 54px;
+        background: url('../../images/eye1.svg') no-repeat;
+        background-size: contain;
+        @include middle-small {
+            top: 80px;
+        }
+        @include middle {
+            top: 100px;
+            right: 20px;
+            width: 133px;
+            height: 90px;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 40px;
+        left: 10px;
+        width: 54px;
+        height: 54px;
+        background: url('../../images/eye.svg') no-repeat;
+        background-size: contain;
+        @include middle {
+            bottom: 40px;
+            left: 20px;
+            width: 90px;
+            height: 90px;
+        }
+    }
+    &__top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 103px;
+        border-bottom: 1px solid $gray;
+        @include middle-small {
+            min-height: 150px;
+        }
+        @include middle {
+            min-height: 200px;
+        }
+    }
+    &__text {
+        width: 236px;
+        @include middle-small {
+            width: 400px;
+        }
+        @include middle {
+            width: 500px;
+        }
+    }
+    &__info {
+        width: 236px;
+        position: relative;
+        background-color: $white;
+        padding: 20px 10px;
+        border-radius: 4px;
+        @include middle-small {
+            width: 400px;
+        }
+        &::after {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            right: 20px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 12px solid $white;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        max-width: 390px;
+        margin: 40px auto;
+        @include middle {
+            max-width: 503;
+            margin-top: 70px;
+        }
+    }
+    &__btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__input {
+        padding: 13px 0;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 19px;
+        width: 182px;
+        text-align: center;
+        border: none;
+        outline: none;
+        appearance: none;
+        @include middle-small {
+            width: 249px;
+            font-size: 16px;
+            line-height: 28px;
+            margin-bottom: 27px;
+            padding: 15px 0;
+          }
+          @include middle {
+            width: 315px;
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 34px;
+            padding: 18px 0;
+          }
+    }
+    &__footer {
+        margin-top: auto;
+    }
+    
+}
+
+.err {
+    box-shadow: 0 0 3px red inset,
+                0 0 3px red;
+}

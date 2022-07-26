@@ -1,0 +1,21 @@
+@import '../../../Styles/';
+
+.sound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    &__mic {
+        width: 200px;
+        height: 70px;
+        background: url('../../../images/microphone.svg') no-repeat center;
+        margin-bottom: 20px;
+    }
+    &__bar {
+        margin-bottom: 20px;
+        height: 5px;
+        min-width: 400px;
+        background-color: $white;
+    }
+}

@@ -1,0 +1,63 @@
+@import '../../Styles/index';
+
+.p {
+    text-align: center;
+}
+
+.es {
+    @include text(12px, 14px, 300);
+    @include middle-small {
+        @include text(14px, 19px, 300)
+    }
+}
+
+.s {
+    @include text(14px, 19px, 500);
+    @include middle-small {
+        @include text(16px, 25px, 500)
+    }
+    @include middle {
+        @include text(20px, 29px, 500)
+    }
+}
+
+.m {
+    @include text(16px, 25px, 500);
+    @include middle-small {
+        @include text(20px, 29px, 500)
+    }
+    @include middle {
+        @include text(24px, 35px, 500)
+    }
+}
+
+.l {
+    @include text(20px, 28px, 500);
+    @include middle-small {
+        @include text(25px, 35px, 500)
+    }
+}
+
+.roboto {
+    @include textstyle('Roboto');
+}
+
+.bad {
+    @include textstyle('BadScript')
+}
+
+.white {
+    color: $white;
+}
+
+.gold {
+    color: $gold;
+}
+
+.gray {
+    color: $gray;
+}
+
+.black {
+    color: $black;
+}

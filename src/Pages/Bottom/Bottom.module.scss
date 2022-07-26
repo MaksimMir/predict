@@ -1,0 +1,89 @@
+@import '../../Styles/index.scss';
+
+.footer {
+    position: relative;
+    padding-bottom: 96px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 200px;
+        right: 0;
+        width: 83px;;
+        height: 54px;
+        background: url('../../images/eye1.svg') no-repeat center;
+        @include small {
+            right: 20px;
+        }
+        @include middle-small {
+            top: 250px;
+            right: 12px;
+            width: 123px;;
+            height: 94px;
+            background-size: contain;
+        }
+        @include middle {
+            top: 250px;
+            right: 32px;
+            width: 203px;;
+            height: 164px;
+            background-size: contain;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 380px;
+        left: -30px;
+        width: 54px;;
+        height: 54px;
+        background: url('../../images/eye.svg') no-repeat center;
+        @include small {
+            left: 10px;
+        }
+        @include middle-small {
+            top: 500px;
+            left: 20px;
+            width: 93px;;
+            height: 93px;
+            background-size: contain;
+        }
+        @include middle {
+            top: 550px;
+            right: 32px;
+            width: 163px;;
+            height: 163px;
+            background-size: contain;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 27px;
+        @include middle {
+            margin-bottom: 45px;
+        }
+    }
+    &__btns {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        @include middle-small {
+            margin-bottom: 50px;
+        }
+        @include middle {
+            margin-bottom: 100px;
+        }
+    }
+    &__ask {
+        margin-top: auto;
+    }
+    &__block {
+        width: 320px;
+        padding: 80px 45px;
+        background: url('../../images/rune1.svg') no-repeat 140px 40px,
+                    url('../../images/rune2.svg') no-repeat 140px 200px;
+        @include middle {
+            background-position: 140px 20px,
+                                 140px 250px;
+        }
+    }
+}

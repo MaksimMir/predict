@@ -1,0 +1,26 @@
+.table {
+    border-collapse: collapse;
+    background-color: white;
+    max-width: 480px;
+    margin-bottom: 40px;
+    &__tr {
+        border-bottom: 1px solid rgba(#000000, .3);
+    }
+    &__td {
+        padding: 10px 20px;
+        text-align: left;
+        vertical-align: top;
+        font-size: 20px;
+        line-height: 29px;
+        font-weight: 300;
+        &:nth-child(2) {
+            font-weight: 600;
+            text-align: right;
+        }
+        & ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
